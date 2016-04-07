@@ -9,11 +9,17 @@ ActiveAdmin.register Quote do
     i.actions
   end
 
+
+
+  before_create do |quote|
+
+    quote.user = current_user
+  end
+
   form do |f|
     f.inputs 'Quote' do
       # f.source
       f.input :body
-      f.input :user_id, :label => 'User', :as => :select, :collection => User.all.map{|u| ["#{u.last_name}, #{u.first_name}", u.id]}
       f.input :source
     end
     f.actions
@@ -29,7 +35,7 @@ ActiveAdmin.register Quote do
         s.source
       end
       row 'quote user' do
-        s.user.first_name
+        s.user
       end
     end
   end
