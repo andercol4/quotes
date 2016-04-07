@@ -13,7 +13,7 @@ ActiveAdmin.register Quote do
     f.inputs 'Quote' do
       # f.source
       f.input :body
-      f.input :user
+      f.input :user_id, :label => 'User', :as => :select, :collection => User.all.map{|u| ["#{u.last_name}, #{u.first_name}", u.id]}
       f.input :source
     end
     f.actions
