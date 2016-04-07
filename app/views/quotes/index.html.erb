@@ -4,8 +4,7 @@
 
 <% @quotes.each do |quote| %>
     <%= raw(quote.body) %>
-  &mdash;
-  <%= link_to quote.source.name, source_path(quote.source) %>
+  <p>&mdash; <%= link_to quote.source.name, source_path(quote.source) %></p>
   <hr />
 <% end %>
 

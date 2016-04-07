@@ -1,6 +1,6 @@
 class SourcesController < ApplicationController
   def index
-
+    @sources = Source.order(:name).page params[:page]
   end
 
   def show
