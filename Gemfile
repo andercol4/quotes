@@ -4,6 +4,7 @@ gem 'rails', '4.2.6'
 gem 'puma'
 gem 'pg', '~> 0.15'
 
+gem 'will_paginate', '~> 3.0.6'
 gem 'activeadmin', '~> 1.0.0.pre2'
 gem 'devise'
 gem 'foundation-rails'
