@@ -1,7 +1,8 @@
-<p>Quotes should be listed on this page</p>
-
-<p>It should be something like this. For example:</p>
-
+<h1> Quotes </h1>
+<%= link_to 'All Sources', sources_path %>
+<br />
+<br />
+<hr />
 <% @quotes.each do |quote| %>
     <%= raw(quote.body) %>
   <p>

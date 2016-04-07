@@ -1,10 +1,10 @@
 class SourcesController < ApplicationController
   def index
-    @sources = Source.order(:name).page params[:page]
+    @sources = Source.order(:name)
   end
 
   def show
     @source = Source.find(params[:id])
-    @quotes = Quote.page params[:page]
+    @quotes = @source.quotes.page params[:page]
   end
 end
