@@ -1,5 +1,5 @@
 ActiveAdmin.register User do
-  permit_params :first_name, :last_name, :email, :password
+  permit_params :first_name, :last_name, :email, :password, :admin
 
   filter :email
   filter :current_sign_in_at

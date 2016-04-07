@@ -1,9 +1,11 @@
 <h1><%=@source.name %></h1>
 
+<%= link_to 'All Quotes', quotes_path %>
+<%= link_to 'All Sources', sources_path %>
+<br />
+
 <% @quotes.each do |quote| %>
     <%= raw(quote.body) %>
   <p>&mdash; <%=quote.source.name %></p>
   <hr />
 <% end %>
-
-<%= paginate @quotes %>

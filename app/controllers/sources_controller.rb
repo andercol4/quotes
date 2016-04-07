@@ -5,6 +5,6 @@ class SourcesController < ApplicationController
 
   def show
     @source = Source.find(params[:id])
-    @quotes = @source.quotes.page params[:page]
+    @quotes = @source.quotes
   end
 end
