@@ -12,3 +12,6 @@
     <p>Submitted by Bob Jones</p>
   </div>
 </div>
+<% if @quotes %>
+  <%= will_paginate @quotes %>
+<% end %>
