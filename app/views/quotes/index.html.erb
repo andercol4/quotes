@@ -4,8 +4,13 @@
 
 <% @quotes.each do |quote| %>
     <%= raw(quote.body) %>
-  <p>&mdash; <%= link_to quote.source.name, source_path(quote.source) %></p>
+  <p>
+    &mdash; <%= link_to quote.source.name, source_path(quote.source) %>
+    <br />
+    submitted by: <%= "#{quote.user.first_name} #{quote.user.last_name}" %>
+  </p>
+
   <hr />
 <% end %>
-
+<br />
 <%= paginate @quotes %>
