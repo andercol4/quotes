@@ -1,0 +1,10 @@
+<h1><%=@source.name %></h1>
+
+<% @quotes.each do |quote| %>
+    <%= raw(quote.body) %>
+  &mdash;
+  <%= link_to quote.source.name, source_path(quote.source) %>
+  <hr />
+<% end %>
+
+<%= paginate @quotes %>

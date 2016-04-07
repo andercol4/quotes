@@ -2,15 +2,11 @@
 
 <p>It should be something like this. For example:</p>
 
-<div class="row">
-  <div class="small-9 small-centered columns">
-    <q>
-      Somebody told me how frightening it was how much topsoil we are losing
-      each year, but I told that story around the campfire and nobody got scared.
-    </q>
-    <p>&mdash; <a href="#">Jack Handey</a></p>
-    <p>Submitted by Bob Jones</p>
-  </div>
-</div>
+<% @quotes.each do |quote| %>
+    <%= raw(quote.body) %>
+  &mdash;
+  <%= link_to quote.source.name, source_path(quote.source) %>
+  <hr />
+<% end %>
 
 <%= paginate @quotes %>

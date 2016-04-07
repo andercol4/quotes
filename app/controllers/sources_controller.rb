@@ -1,9 +1,10 @@
 class SourcesController < ApplicationController
   def index
-    #TODO: Implement me
+
   end
 
   def show
-    #TODO: Implement me
+    @source = Source.find(params[:id])
+    @quotes = Quote.page params[:page]
   end
 end
